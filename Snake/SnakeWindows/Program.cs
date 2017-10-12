@@ -1,17 +1,15 @@
 ﻿using System;
-using System.Threading;
-using System.Windows;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Snake
+namespace SnakeWindows
 {
     class Program
     {
-        
-
         static void Main(string[] args)
         {
-            var key = Console.L
-
             while (true)
             {
 
@@ -23,6 +21,6 @@ namespace Snake
             }
         }
 
-        static void KeyDown(object sender)
+        
     }
 }
