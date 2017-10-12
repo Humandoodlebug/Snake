@@ -9,12 +9,13 @@ namespace SnakeWindows
 
     class Program
     {
-
+        
         enum Direction { Right, Down, Up, Left };
 
         static void Main(string[] args)
         {
             Direction direction;
+            (int row, int column) snakePosition = (0, 0);
             while (true)
             {
                 if (Console.KeyAvailable)
