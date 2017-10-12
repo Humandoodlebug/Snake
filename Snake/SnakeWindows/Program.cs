@@ -15,6 +15,7 @@ namespace SnakeWindows
         static void Main(string[] args)
         {
             Direction direction;
+            int snakeLength = 3;
 
             //Initialise the snake grid
             int[,] snakeGrid = new int[15,15];
@@ -53,13 +54,16 @@ namespace SnakeWindows
 
                 if (Environment.TickCount % 400 == 0)
                 {
-                    //Move snake
+                    //Draw board
                     for (int i = 0; i < 15; i++) { 
                         for(int j = 0; j < 15; j++) {
                             
                             
                         }
                     }
+
+                    //Detecting snake collisions
+                    if 
                     
                     //Initialise the length to 3.
                     snakeGrid[7,7] = 3;
