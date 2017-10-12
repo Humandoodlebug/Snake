@@ -26,7 +26,7 @@ namespace SnakeWindows
                 }
             }
 
-            (int row, int column) snakePosition = (0, 0);
+            (int row, int column) snakePosition = (8, 8);
             while (true)
             {
                 if (Console.KeyAvailable)
@@ -57,8 +57,21 @@ namespace SnakeWindows
                     //Draw board
                     for (int i = 0; i < 15; i++) { 
                         for(int j = 0; j < 15; j++) {
+                            switch (Console.ReadKey(true).Key)
+                        {
+                        case direction = Direction.Right:
                             
-                            
+                            break;
+                        case direction = Direction.Down:
+                            break;
+                        case direction = Direction.Left:
+                            break;
+                        case direction = Direction.Up:
+                            break;
+                        case ConsoleKey.Escape:
+                            Environment.Exit(0);
+                            break;
+                        }
                         }
                     }
 
@@ -66,9 +79,9 @@ namespace SnakeWindows
                     if 
                     
                     //Initialise the length to 3.
-                    snakeGrid[7,7] = 3;
-                    snakeGrid[7,6] = 2;
-                    snakeGrid[7,5] = 1;
+                    snakeGrid[8,8] = 3;
+                    snakeGrid[8,7] = 2;
+                    snakeGrid[8,6] = 1;
 
                     //Update the snake grid
                     for (int i = 0; i < 15; i++)
@@ -80,6 +93,9 @@ namespace SnakeWindows
                                 Console.Write("+");
                             } else if (snakeGrid[i,j] < 0) {
                                 Console.Write("x");
+                            } else if (i == snakePosition.row && j == snakePosition.column) {
+                                Console.Write("O");
+                            }
                             } else {
                                 Console.Write(".");
                             }
